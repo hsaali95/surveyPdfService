@@ -1,8 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const app = express();
-app.use(
+const apps = express();
+apps.use(
   cors({
     origin: [
       "http://192.168.0.213:3000",
@@ -15,10 +15,10 @@ app.use(
   })
 );
 // Use bodyParser.json() to set the JSON payload limit
-app.use(bodyParser.json({ limit: "50mb" }));
+apps.use(bodyParser.json({ limit: "50mb" }));
 
 // Use bodyParser.urlencoded() to set the URL-encoded payload limit
-app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
-app.use(express.static("public"));
+apps.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
+apps.use(express.static("public"));
 
-export default app;
+module.exports = apps;

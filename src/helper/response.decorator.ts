@@ -1,4 +1,4 @@
-const config = require("../config");
+const config = require("../config/index");
 const { ApiError } = require("../utils/apiError");
 
 export const successResponse = <T>(response: T | null) => {

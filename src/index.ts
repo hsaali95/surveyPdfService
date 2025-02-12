@@ -5,9 +5,8 @@ const { serverStartLog } = require("./helper/response.decorator");
 
 app.use("/api/v1", require("../src/api/routes"));
 
-
 const server = http.createServer(app);
-const PORT = parseInt(config.PORT || "3000");
+const PORT = parseInt("3000");
 
 //handle any uncaught exceptions preventing the server from crashing
 process.on("uncaughtException", function (err) {
