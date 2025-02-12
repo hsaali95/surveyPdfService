@@ -1,6 +1,6 @@
-import cors from "cors";
+const express = require("express");
+const cors = require("cors");
 const bodyParser = require("body-parser");
-import express from "express";
 const app = express();
 app.use(
   cors({
