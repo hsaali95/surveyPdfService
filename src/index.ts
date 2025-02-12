@@ -1,8 +1,7 @@
-require("dotenv").config();
-import app from "./config/express";
-import http from "http";
-import { serverStartLog } from "./helper/response.decorator";
-import config from "./config";
+require("dotenv").config(); // Load environment variables
+const app = require("./config/express");
+const http = require("http");
+const { serverStartLog } = require("./helper/response.decorator");
 
 app.use("/api/v1", require("../src/api/routes"));
 
