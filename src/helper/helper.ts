@@ -1,5 +1,8 @@
-import path from "path";
-import html_to_pdf from "html-pdf-node";
+
+const path = require("path");
+const html_to_pdf = require("html-pdf-node");
+
+// Other existing code remains the same
 
 export const sleep = (ms: number) => {
   return new Promise((resolve) => {

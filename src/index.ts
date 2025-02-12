@@ -2,11 +2,9 @@ require("dotenv").config();
 import app from "./config/express";
 import http from "http";
 import { serverStartLog } from "./helper/response.decorator";
-import { errorHandler } from "./middlewares/error";
 import config from "./config";
 
 app.use("/api/v1", require("../src/api/routes"));
-app.use(errorHandler);
 
 
 const server = http.createServer(app);

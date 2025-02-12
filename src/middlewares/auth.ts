@@ -3,7 +3,6 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 import { Response, NextFunction, Request } from "express";
-import { verifyToken } from "../helper/jwt.token";
 import { ApiError } from "../utils/apiError";
 import { user } from "../types";
 import { statusMessages } from "../utils/statusMessages";

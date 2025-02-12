@@ -1,5 +1,5 @@
-import config from "../config";
-import { ApiError } from "../utils/apiError";
+const config = require("../config");
+const { ApiError } = require("../utils/apiError");
 
 export const successResponse = <T>(response: T | null) => {
   let message = {
@@ -10,7 +10,7 @@ export const successResponse = <T>(response: T | null) => {
   return message;
 };
 
-export const errorResponse = (error: ApiError) => {
+export const errorResponse = (error: typeof ApiError) => {
   let message = {
     data: null,
     status: false,

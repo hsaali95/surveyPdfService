@@ -1,5 +1,5 @@
-import { MySqlDialect } from "@sequelize/mysql";
-import config from ".";
+const { MySqlDialect } = require("@sequelize/mysql");
+const config = require(".");
 
 const { Sequelize, Transaction } = require("sequelize");
 
